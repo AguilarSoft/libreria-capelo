@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Librería Capelo | Catálogo</title>
+  <title>Librería Capelo | Papelería y Servicios</title>
 
   <style>
     :root {
@@ -36,122 +37,277 @@
     /* HEADER */
 
     header {
-      background:
-        radial-gradient(circle at 15% 20%, rgba(241,90,10,.12), transparent 25%),
-        radial-gradient(circle at 85% 10%, rgba(6,43,82,.10), transparent 25%),
-        var(--cream);
-
-      padding: 34px 20px 28px;
+      background: var(--cream);
       text-align: center;
+      padding: 35px 20px 30px;
       border-bottom: 5px solid var(--orange);
-    }
-
-    .brand {
-      display: inline-block;
     }
 
     .brand-small {
       color: var(--navy);
-      font-size: 27px;
+      font-size: 28px;
       font-weight: 800;
-      letter-spacing: .5px;
     }
 
     .brand-name {
       color: var(--orange);
-      font-size: 64px;
+      font-size: 68px;
       line-height: .9;
       font-weight: 800;
-      letter-spacing: -3px;
+      letter-spacing: -4px;
     }
 
     .brand-line {
-      width: 260px;
+      width: 270px;
       height: 5px;
       background: var(--navy);
-      margin: 12px auto 10px;
+      margin: 13px auto;
       border-radius: 10px;
     }
 
     .tagline {
-      font-size: 17px;
-      font-weight: 700;
       color: var(--navy);
-      letter-spacing: .5px;
+      font-size: 17px;
+      font-weight: 800;
     }
 
     .tagline span {
       color: var(--orange);
     }
 
-    /* HERO */
-
-    .hero {
-      max-width: 1100px;
-      margin: 24px auto 0;
-      padding: 0 20px;
-    }
-
-    .hero-box {
-      background: var(--navy);
-      color: white;
-      border-radius: 18px;
-      padding: 22px 25px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      box-shadow: 0 10px 30px rgba(6,43,82,.15);
-    }
-
-    .hero-title {
-      font-size: 26px;
-      font-weight: 800;
-    }
-
-    .hero-title span {
-      color: var(--orange-light);
-    }
-
-    .hero-text {
-      color: #e6edf5;
-      margin-top: 5px;
-      font-size: 14px;
-    }
-
-    .hero-badge {
-      background: var(--orange);
-      padding: 13px 20px;
-      border-radius: 12px;
-      font-weight: 800;
-      white-space: nowrap;
-    }
-
-    /* CONTAINER */
+    /* MAIN */
 
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 24px 20px 50px;
+      padding: 30px 20px 60px;
+    }
+
+    .welcome {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .welcome h2 {
+      color: var(--navy);
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .welcome p {
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* SECTIONS */
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--navy);
+      font-size: 24px;
+      font-weight: 800;
+      margin: 35px 0 18px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 10px;
+      height: 30px;
+      background: var(--orange);
+      border-radius: 5px;
+    }
+
+    /* CATEGORY CARDS */
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .category-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 20px;
+      cursor: pointer;
+      transition: .2s;
+      box-shadow: 0 5px 15px rgba(6,43,82,.05);
+    }
+
+    .category-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--orange);
+      box-shadow: 0 10px 25px rgba(6,43,82,.12);
+    }
+
+    .category-icon {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--orange);
+      color: white;
+      border-radius: 14px;
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+
+    .category-card h3 {
+      color: var(--navy);
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+
+    .category-card p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .view {
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 800;
+      margin-top: 15px;
+      display: block;
+    }
+
+    /* SERVICES */
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .service-card {
+      background: var(--navy);
+      color: white;
+      border-radius: 16px;
+      padding: 24px 20px;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      background: var(--navy-dark);
+    }
+
+    .service-icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-size: 19px;
+      margin-bottom: 7px;
+    }
+
+    .service-card p {
+      color: #dbe7f3;
+      font-size: 14px;
+    }
+
+    /* DETAIL PAGE */
+
+    #detail {
+      display: none;
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--navy);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .back-button:hover {
+      background: var(--orange);
+    }
+
+    .detail-header {
+      background: var(--navy);
+      color: white;
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 25px;
+    }
+
+    .detail-header h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .detail-header p {
+      color: #dbe7f3;
+    }
+
+    .product-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+    }
+
+    .product {
+      background: white;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--orange);
+      border-radius: 12px;
+      padding: 17px;
+      font-size: 15px;
+      font-weight: 600;
+      box-shadow: 0 3px 12px rgba(6,43,82,.04);
+    }
+
+    /* SERVICES DETAIL */
+
+    .service-detail {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 25px;
+      margin-bottom: 15px;
+    }
+
+    .service-detail h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .service-detail p {
+      color: var(--muted);
+      line-height: 1.5;
     }
 
     /* SEARCH */
 
     .search-wrapper {
       position: relative;
-      margin-bottom: 28px;
+      margin-bottom: 25px;
     }
 
     .search {
       width: 100%;
-      padding: 17px 20px 17px 52px;
+      padding: 16px 20px 16px 48px;
       border: 2px solid var(--border);
-      border-radius: 14px;
+      border-radius: 13px;
       font-size: 16px;
-      background: white;
-      color: var(--text);
       outline: none;
-      box-shadow: 0 5px 20px rgba(6,43,82,.05);
+      background: white;
     }
 
     .search:focus {
@@ -160,81 +316,16 @@
 
     .search-icon {
       position: absolute;
-      left: 19px;
-      top: 15px;
+      left: 18px;
+      top: 14px;
       font-size: 22px;
     }
-
-    /* CATEGORIES */
-
-    .category {
-      margin-bottom: 32px;
-    }
-
-    .category-title {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--navy);
-      font-size: 22px;
-      font-weight: 800;
-      margin-bottom: 15px;
-    }
-
-    .category-title::before {
-      content: "";
-      width: 11px;
-      height: 32px;
-      background: var(--orange);
-      border-radius: 5px;
-      display: inline-block;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
-      gap: 13px;
-    }
-
-    .product {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 13px;
-      padding: 17px;
-      min-height: 82px;
-      display: flex;
-      align-items: center;
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text);
-      transition: all .18s ease;
-      box-shadow: 0 3px 12px rgba(6,43,82,.04);
-      border-left: 4px solid transparent;
-    }
-
-    .product:hover {
-      transform: translateY(-3px);
-      border-left-color: var(--orange);
-      box-shadow: 0 8px 22px rgba(6,43,82,.10);
-    }
-
-    .product::before {
-      content: "•";
-      color: var(--orange);
-      font-size: 22px;
-      margin-right: 9px;
-      line-height: 1;
-    }
-
-    /* NO RESULTS */
 
     .no-results {
       text-align: center;
-      padding: 45px 20px;
       color: var(--muted);
+      padding: 30px;
       display: none;
-      background: white;
-      border-radius: 15px;
     }
 
     /* WHATSAPP */
@@ -250,12 +341,7 @@
       border-radius: 50px;
       font-weight: 800;
       box-shadow: 0 7px 25px rgba(0,0,0,.22);
-      z-index: 20;
-      transition: transform .2s;
-    }
-
-    .whatsapp:hover {
-      transform: translateY(-3px);
+      z-index: 50;
     }
 
     /* FOOTER */
@@ -264,13 +350,13 @@
       background: var(--navy);
       color: white;
       text-align: center;
-      padding: 32px 20px;
+      padding: 30px 20px;
     }
 
     .footer-brand {
+      color: var(--orange);
       font-size: 28px;
       font-weight: 800;
-      color: var(--orange);
       margin-bottom: 8px;
     }
 
@@ -280,93 +366,72 @@
     }
 
     .footer-slogan {
-      margin-top: 15px;
-      color: white;
-      font-size: 16px;
+      margin-top: 12px;
       font-weight: 700;
     }
 
     .footer-slogan span {
-      color: var(--orange-light);
+      color: var(--orange);
     }
 
     /* MOBILE */
 
-    @media (max-width: 700px) {
-
-      header {
-        padding: 25px 15px 22px;
-      }
+    @media (max-width: 750px) {
 
       .brand-small {
-        font-size: 21px;
-      }
-
-      .brand-name {
-        font-size: 50px;
-      }
-
-      .brand-line {
-        width: 210px;
-        height: 4px;
-      }
-
-      .tagline {
-        font-size: 14px;
-      }
-
-      .hero {
-        padding: 0 14px;
-      }
-
-      .hero-box {
-        display: block;
-        padding: 20px;
-      }
-
-      .hero-title {
         font-size: 22px;
       }
 
-      .hero-badge {
-        display: inline-block;
-        margin-top: 14px;
+      .brand-name {
+        font-size: 53px;
+      }
+
+      .brand-line {
+        width: 220px;
+      }
+
+      .categories,
+      .services,
+      .product-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .welcome h2 {
+        font-size: 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      header {
+        padding: 25px 15px;
+      }
+
+      .brand-name {
+        font-size: 47px;
       }
 
       .container {
-        padding: 20px 14px 45px;
+        padding: 25px 14px 50px;
       }
 
-      .products {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+      .categories,
+      .services,
+      .product-list {
+        grid-template-columns: 1fr;
       }
 
-      .product {
-        min-height: 78px;
-        padding: 13px;
-        font-size: 13px;
+      .detail-header {
+        padding: 24px;
       }
 
-      .category-title {
-        font-size: 19px;
+      .detail-header h2 {
+        font-size: 25px;
       }
 
       .whatsapp {
         right: 14px;
         bottom: 14px;
-        padding: 13px 17px;
-      }
-    }
-
-    @media (max-width: 380px) {
-
-      .products {
-        grid-template-columns: 1fr;
-      }
-
-      .brand-name {
-        font-size: 44px;
       }
     }
   </style>
@@ -376,42 +441,255 @@
 
 <header>
 
-  <div class="brand">
-    <div class="brand-small">Librería</div>
-    <div class="brand-name">capelo</div>
+  <div class="brand-small">Librería</div>
 
-    <div class="brand-line"></div>
+  <div class="brand-name">capelo</div>
 
-    <div class="tagline">
-      IDEAS + <span>COLOR</span> = CREACIÓN
-    </div>
+  <div class="brand-line"></div>
+
+  <div class="tagline">
+    IDEAS + <span>COLOR</span> = CREACIÓN
   </div>
 
 </header>
 
-<section class="hero">
 
-  <div class="hero-box">
+<!-- ========================= -->
+<!-- INICIO -->
+<!-- ========================= -->
 
-    <div>
-      <div class="hero-title">
-        LO QUE NECESITAS, <span>EN UN SOLO LUGAR</span>
-      </div>
+<main id="home" class="container">
 
-      <div class="hero-text">
-        Papelería, útiles escolares y materiales para tus ideas.
-      </div>
+  <div class="welcome">
+
+    <h2>Lo que necesitas, en un solo lugar</h2>
+
+    <p>
+      Explora nuestros productos y servicios.
+    </p>
+
+  </div>
+
+
+  <!-- PRODUCTOS -->
+
+  <h2 class="section-title">
+    Productos
+  </h2>
+
+  <div class="categories">
+
+    <div class="category-card"
+         onclick="showCategory('papeles')">
+
+      <div class="category-icon">📄</div>
+
+      <h3>Papeles y Cartulinas</h3>
+
+      <p>
+        Papeles especiales, cartulinas y hojas
+        para todo tipo de proyectos.
+      </p>
+
+      <span class="view">
+        Ver productos →
+      </span>
+
     </div>
 
-    <div class="hero-badge">
-      CATÁLOGO 2026
+
+    <div class="category-card"
+         onclick="showCategory('foamy')">
+
+      <div class="category-icon">🎨</div>
+
+      <h3>Foamy y Manualidades</h3>
+
+      <p>
+        Materiales para crear, decorar y
+        realizar manualidades.
+      </p>
+
+      <span class="view">
+        Ver productos →
+      </span>
+
+    </div>
+
+
+    <div class="category-card"
+         onclick="showCategory('adhesivos')">
+
+      <div class="category-icon">🧴</div>
+
+      <h3>Adhesivos y Cintas</h3>
+
+      <p>
+        Silicones, gomas, tapes y materiales
+        adhesivos.
+      </p>
+
+      <span class="view">
+        Ver productos →
+      </span>
+
+    </div>
+
+
+    <div class="category-card"
+         onclick="showCategory('escritura')">
+
+      <div class="category-icon">✏️</div>
+
+      <h3>Escritura y Dibujo</h3>
+
+      <p>
+        Lápices, lapiceros, marcadores,
+        crayones y más.
+      </p>
+
+      <span class="view">
+        Ver productos →
+      </span>
+
+    </div>
+
+
+    <div class="category-card"
+         onclick="showCategory('herramientas')">
+
+      <div class="category-icon">✂️</div>
+
+      <h3>Corte y Herramientas</h3>
+
+      <p>
+        Tijeras, reglas, cuchillas, compás
+        y herramientas.
+      </p>
+
+      <span class="view">
+        Ver productos →
+      </span>
+
+    </div>
+
+
+    <div class="category-card"
+         onclick="showCategory('archivo')">
+
+      <div class="category-icon">📁</div>
+
+      <h3>Archivo y Organización</h3>
+
+      <p>
+        Fólderes, sobres, clips, grapas
+        y organización.
+      </p>
+
+      <span class="view">
+        Ver productos →
+      </span>
+
+    </div>
+
+
+    <div class="category-card"
+         onclick="showCategory('regalo')">
+
+      <div class="category-icon">🎁</div>
+
+      <h3>Empaque y Regalo</h3>
+
+      <p>
+        Bolsas de regalo y materiales
+        para presentación.
+      </p>
+
+      <span class="view">
+        Ver productos →
+      </span>
+
     </div>
 
   </div>
 
-</section>
 
-<main class="container">
+  <!-- SERVICIOS -->
+
+  <h2 class="section-title">
+    Servicios
+  </h2>
+
+
+  <div class="services">
+
+
+    <div class="service-card"
+         onclick="showServices()">
+
+      <div class="service-icon">🖨️</div>
+
+      <h3>Copias</h3>
+
+      <p>
+        Servicio de copias para tus documentos.
+      </p>
+
+    </div>
+
+
+    <div class="service-card"
+         onclick="showServices()">
+
+      <div class="service-icon">🖨️</div>
+
+      <h3>Impresiones</h3>
+
+      <p>
+        Impresiones monocromáticas y a color.
+      </p>
+
+    </div>
+
+
+    <div class="service-card"
+         onclick="showServices()">
+
+      <div class="service-icon">📑</div>
+
+      <h3>Scan</h3>
+
+      <p>
+        Digitalización de tus documentos.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</main>
+
+
+<!-- ========================= -->
+<!-- DETALLE -->
+<!-- ========================= -->
+
+<main id="detail" class="container">
+
+  <button class="back-button" onclick="goHome()">
+    ← Volver al catálogo
+  </button>
+
+
+  <div class="detail-header">
+
+    <h2 id="detailTitle"></h2>
+
+    <p id="detailDescription"></p>
+
+  </div>
+
 
   <div class="search-wrapper">
 
@@ -419,180 +697,76 @@
 
     <input
       type="text"
-      id="search"
+      id="detailSearch"
       class="search"
       placeholder="Buscar producto..."
     >
 
   </div>
 
-  <div id="catalog">
 
-    <!-- PAPELES -->
+  <div id="productList" class="product-list"></div>
 
-    <section class="category">
-
-      <h2 class="category-title">
-        Papeles y Cartulinas
-      </h2>
-
-      <div class="products">
-
-        <div class="product">Papel China</div>
-        <div class="product">Ariel Cover — colores</div>
-        <div class="product">Papel arcoíris</div>
-        <div class="product">Papel arcoíris con textura</div>
-        <div class="product">Papel acuarela</div>
-        <div class="product">Papel opalina</div>
-        <div class="product">Papel lino</div>
-        <div class="product">Papel construcción</div>
-        <div class="product">Papel Kraft</div>
-        <div class="product">Cartulinas blancas</div>
-        <div class="product">Cartulinas de colores</div>
-        <div class="product">Hojas carta cuadriculadas</div>
-        <div class="product">Hojas carta con líneas</div>
-        <div class="product">Hojas milimetradas</div>
-        <div class="product">Hojas blancas 120 gramos — carta</div>
-        <div class="product">Hojas blancas 120 gramos — oficio</div>
-
-      </div>
-
-    </section>
-
-    <!-- FOAMY -->
-
-    <section class="category">
-
-      <h2 class="category-title">
-        Foamy y Manualidades
-      </h2>
-
-      <div class="products">
-
-        <div class="product">Foamy — colores surtidos</div>
-        <div class="product">Foamy brillante</div>
-        <div class="product">Foamy moldeable</div>
-        <div class="product">Plasticina</div>
-
-      </div>
-
-    </section>
-
-    <!-- ADHESIVOS -->
-
-    <section class="category">
-
-      <h2 class="category-title">
-        Adhesivos y Cintas
-      </h2>
-
-      <div class="products">
-
-        <div class="product">Silicon en barra</div>
-        <div class="product">Silicon líquido</div>
-        <div class="product">Goma en barra</div>
-        <div class="product">Goma blanca</div>
-        <div class="product">Tape grueso</div>
-        <div class="product">Tape delgado</div>
-        <div class="product">Masking tape</div>
-
-      </div>
-
-    </section>
-
-    <!-- ESCRITURA -->
-
-    <section class="category">
-
-      <h2 class="category-title">
-        Escritura y Dibujo
-      </h2>
-
-      <div class="products">
-
-        <div class="product">Lápices</div>
-        <div class="product">Lapiceros</div>
-        <div class="product">Marcadores</div>
-        <div class="product">Marcadores para pizarrón</div>
-        <div class="product">Resaltadores</div>
-        <div class="product">Crayones</div>
-        <div class="product">Correctores</div>
-        <div class="product">Borradores</div>
-
-      </div>
-
-    </section>
-
-    <!-- HERRAMIENTAS -->
-
-    <section class="category">
-
-      <h2 class="category-title">
-        Corte y Herramientas
-      </h2>
-
-      <div class="products">
-
-        <div class="product">Tijeras</div>
-        <div class="product">Cuchillas</div>
-        <div class="product">Reglas</div>
-        <div class="product">Compás</div>
-        <div class="product">Estuche geométrico con reglas</div>
-        <div class="product">Pistola de silicon</div>
-
-      </div>
-
-    </section>
-
-    <!-- ORGANIZACIÓN -->
-
-    <section class="category">
-
-      <h2 class="category-title">
-        Archivo y Organización
-      </h2>
-
-      <div class="products">
-
-        <div class="product">Fólderes de colores</div>
-        <div class="product">Fólder color natural</div>
-        <div class="product">Sobres Manila</div>
-        <div class="product">Sobres tamaño carta</div>
-        <div class="product">Ganchos de colores</div>
-        <div class="product">Clips</div>
-        <div class="product">Grapas</div>
-        <div class="product">Engrapadoras</div>
-        <div class="product">Sticky Notes / Post-its</div>
-
-      </div>
-
-    </section>
-
-    <!-- REGALO -->
-
-    <section class="category">
-
-      <h2 class="category-title">
-        Empaque y Regalo
-      </h2>
-
-      <div class="products">
-
-        <div class="product">
-          Bolsas de regalo de papel Kraft
-        </div>
-
-      </div>
-
-    </section>
-
-  </div>
-
-  <div id="noResults" class="no-results">
+  <div id="detailNoResults" class="no-results">
     No encontramos ese producto.
   </div>
 
+
+  <!-- SERVICIOS -->
+
+  <div id="servicesList">
+
+    <div class="service-detail">
+
+      <h3>Copias</h3>
+
+      <p>
+        Servicio de copias para documentos,
+        tareas y material de trabajo.
+      </p>
+
+    </div>
+
+
+    <div class="service-detail">
+
+      <h3>Impresiones monocromáticas</h3>
+
+      <p>
+        Impresiones en blanco y negro
+        para documentos y trabajos.
+      </p>
+
+    </div>
+
+
+    <div class="service-detail">
+
+      <h3>Impresiones a color</h3>
+
+      <p>
+        Impresiones a color para trabajos,
+        documentos, proyectos y materiales.
+      </p>
+
+    </div>
+
+
+    <div class="service-detail">
+
+      <h3>Scan</h3>
+
+      <p>
+        Digitalización de documentos
+        para convertirlos en archivos digitales.
+      </p>
+
+    </div>
+
+  </div>
+
 </main>
+
 
 <a
   class="whatsapp"
@@ -602,6 +776,7 @@
   WhatsApp
 </a>
 
+
 <footer>
 
   <div class="footer-brand">
@@ -609,7 +784,7 @@
   </div>
 
   <div class="footer-text">
-    Papelería · Útiles escolares · Manualidades
+    Papelería · Útiles escolares · Manualidades · Servicios
   </div>
 
   <div class="footer-slogan">
@@ -618,68 +793,263 @@
 
 </footer>
 
+
 <script>
 
-  const search = document.getElementById("search");
+  const data = {
 
-  const products = document.querySelectorAll(".product");
+    papeles: {
+      title: "Papeles y Cartulinas",
+      description:
+        "Encuentra diferentes tipos de papel y cartulinas para tus proyectos.",
+      products: [
+        "Papel China",
+        "Ariel Cover — colores",
+        "Papel arcoíris",
+        "Papel arcoíris con textura",
+        "Papel acuarela",
+        "Papel opalina",
+        "Papel lino",
+        "Papel construcción",
+        "Papel Kraft",
+        "Cartulinas blancas",
+        "Cartulinas de colores",
+        "Hojas carta cuadriculadas",
+        "Hojas carta con líneas",
+        "Hojas milimetradas",
+        "Hojas blancas 120 gramos — carta",
+        "Hojas blancas 120 gramos — oficio"
+      ]
+    },
 
-  const categories = document.querySelectorAll(".category");
+    foamy: {
+      title: "Foamy y Manualidades",
+      description:
+        "Materiales para manualidades, decoración y proyectos creativos.",
+      products: [
+        "Foamy — colores surtidos",
+        "Foamy brillante",
+        "Foamy moldeable",
+        "Plasticina"
+      ]
+    },
 
-  const noResults = document.getElementById("noResults");
+    adhesivos: {
+      title: "Adhesivos y Cintas",
+      description:
+        "Todo lo necesario para pegar, unir y realizar tus proyectos.",
+      products: [
+        "Silicon en barra",
+        "Silicon líquido",
+        "Goma en barra",
+        "Goma blanca",
+        "Tape grueso",
+        "Tape delgado",
+        "Masking tape"
+      ]
+    },
 
-  search.addEventListener("input", () => {
+    escritura: {
+      title: "Escritura y Dibujo",
+      description:
+        "Útiles para escribir, dibujar, estudiar y trabajar.",
+      products: [
+        "Lápices",
+        "Lapiceros",
+        "Marcadores",
+        "Marcadores para pizarrón",
+        "Resaltadores",
+        "Crayones",
+        "Correctores",
+        "Borradores"
+      ]
+    },
 
-    const text = search.value
-      .toLowerCase()
-      .trim();
+    herramientas: {
+      title: "Corte y Herramientas",
+      description:
+        "Herramientas para trabajos escolares, oficina y manualidades.",
+      products: [
+        "Tijeras",
+        "Cuchillas",
+        "Reglas",
+        "Compás",
+        "Estuche geométrico con reglas",
+        "Pistola de silicon"
+      ]
+    },
 
-    let found = 0;
+    archivo: {
+      title: "Archivo y Organización",
+      description:
+        "Productos para organizar documentos y materiales.",
+      products: [
+        "Fólderes de colores",
+        "Fólder color natural",
+        "Sobres Manila",
+        "Sobres tamaño carta",
+        "Ganchos de colores",
+        "Clips",
+        "Grapas",
+        "Engrapadoras",
+        "Sticky Notes / Post-its"
+      ]
+    },
 
-    products.forEach(product => {
+    regalo: {
+      title: "Empaque y Regalo",
+      description:
+        "Opciones para presentar y entregar tus regalos.",
+      products: [
+        "Bolsas de regalo de papel Kraft"
+      ]
+    }
 
-      const match = product.textContent
-        .toLowerCase()
-        .includes(text);
+  };
 
-      product.style.display = match
-        ? "flex"
-        : "none";
 
-      if (match) {
-        found++;
-      }
+  function showCategory(category) {
+
+    const item = data[category];
+
+    document.getElementById("home").style.display = "none";
+
+    document.getElementById("detail").style.display = "block";
+
+    document.getElementById("detailTitle").textContent =
+      item.title;
+
+    document.getElementById("detailDescription").textContent =
+      item.description;
+
+    document.getElementById("detailSearch").value = "";
+
+    document.getElementById("servicesList").style.display =
+      "none";
+
+    const list =
+      document.getElementById("productList");
+
+    list.innerHTML = "";
+
+    item.products.forEach(product => {
+
+      const div =
+        document.createElement("div");
+
+      div.className = "product";
+
+      div.textContent = product;
+
+      list.appendChild(div);
 
     });
 
-    categories.forEach(category => {
+    document.getElementById("detailSearch")
+      .focus();
 
-      let visible = false;
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
 
-      category
-        .querySelectorAll(".product")
-        .forEach(product => {
 
-          if (product.style.display !== "none") {
-            visible = true;
-          }
+  function showServices() {
 
-        });
+    document.getElementById("home").style.display = "none";
 
-      category.style.display = visible
-        ? "block"
-        : "none";
+    document.getElementById("detail").style.display = "block";
+
+    document.getElementById("detailTitle").textContent =
+      "Servicios";
+
+    document.getElementById("detailDescription").textContent =
+      "Soluciones rápidas para tus documentos.";
+
+    document.getElementById("productList").style.display =
+      "none";
+
+    document.getElementById("detailSearch").style.display =
+      "none";
+
+    document.querySelector(".search-wrapper").style.display =
+      "none";
+
+    document.getElementById("servicesList").style.display =
+      "block";
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+
+  function goHome() {
+
+    document.getElementById("detail").style.display =
+      "none";
+
+    document.getElementById("home").style.display =
+      "block";
+
+    document.getElementById("productList").style.display =
+      "grid";
+
+    document.querySelector(".search-wrapper").style.display =
+      "block";
+
+    document.getElementById("detailSearch").style.display =
+      "block";
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+
+  document
+    .getElementById("detailSearch")
+    .addEventListener("input", function () {
+
+      const text =
+        this.value.toLowerCase().trim();
+
+      const products =
+        document.querySelectorAll(
+          "#productList .product"
+        );
+
+      let found = 0;
+
+      products.forEach(product => {
+
+        const match =
+          product.textContent
+            .toLowerCase()
+            .includes(text);
+
+        product.style.display =
+          match ? "block" : "none";
+
+        if (match) {
+          found++;
+        }
+
+      });
+
+      document.getElementById("detailNoResults")
+        .style.display =
+          found === 0
+            ? "block"
+            : "none";
 
     });
-
-    noResults.style.display =
-      found === 0
-        ? "block"
-        : "none";
-
-  });
 
 </script>
 
 </body>
 </html>
+```
