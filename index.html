@@ -890,132 +890,126 @@
      CATÁLOGO
   ========================= */
 
-  const data = {
+ const data = {
 
-    papeles: {
-      title: "Papeles y Cartulinas",
-      icon: "📄",
-      description:
-        "Diferentes tipos de papel, cartulinas y hojas para tus proyectos.",
-      products: [
-        ["Papel China — colores", "📄"],
-        ["Ariel Cover — colores", "🎨"],
-        ["Ariel Cover — blanca 180 gramos", "📃"],
-        ["Papel arcoíris — colores", "🌈"],
-        ["Papel arcoíris con textura — colores", "🌈"],
-        ["Papel acuarela", "🖌️"],
-        ["Papel opalina - 230 gramos", "📑"],
-        ["Papel lino", "📜"],
-        ["Papel construcción — colores", "🎨"],
-        ["Papel Kraft", "🟫"],
-        ["Cartulinas blancas", "⬜"],
-        ["Cartulinas — colores", "🌈"],
-        ["Hojas cuadriculadas - carta", "▦"],
-        ["Hojas líneas - carta", "📄"],
-        ["Hojas milimetradas", "📐"],
-        ["Hojas blancas 75 gramos — carta y oficio", "📄"],
-        ["Hojas blancas 90 gramos — carta y oficio", "📄"],
-        ["Hojas blancas 120 gramos — carta y oficio", "📄"]
-      ]
-    },
+  papeles: {
+    title: "Papeles y Cartulinas",
+    icon: "📄",
+    description:
+      "Diferentes tipos de papel, cartulinas y hojas para tus proyectos.",
+    products: [
+      ["Ariel Cover — blanco 180 g", "📄"],
+      ["Ariel Cover — colores", "🎨"],
+      ["Cartulinas — blancas", "⬜"],
+      ["Cartulinas — colores", "🌈"],
+      ["Hojas blancas — 75 g, carta y oficio", "📄"],
+      ["Hojas blancas — 90 g, carta y oficio", "📄"],
+      ["Hojas blancas — 120 g, carta y oficio", "📄"],
+      ["Hojas cuadriculadas — carta", "▦"],
+      ["Hojas de líneas — carta", "📝"],
+      ["Hojas milimetradas", "📐"],
+      ["Papel acuarela", "🖌️"],
+      ["Papel arcoíris — colores", "🌈"],
+      ["Papel arcoíris con textura — colores", "🌈"],
+      ["Papel China — colores", "🎨"],
+      ["Papel construcción — colores", "🟦"],
+      ["Papel Kraft", "🟫"],
+      ["Papel lino", "📜"],
+      ["Papel opalina — 230 g", "📑"]
+    ]
+  },
 
+  foamy: {
+    title: "Foamy y Manualidades",
+    icon: "🎨",
+    description:
+      "Materiales para manualidades, decoración y proyectos creativos.",
+    products: [
+      ["Foamy — brillante", "✨"],
+      ["Foamy — colores surtidos", "🎨"],
+      ["Foamy — moldeable", "🧩"],
+      ["Plasticina", "🟣"]
+    ]
+  },
 
-    foamy: {
-      title: "Foamy y Manualidades",
-      icon: "🎨",
-      description:
-        "Materiales para manualidades, decoración y proyectos creativos.",
-      products: [
-        ["Foamy — colores surtidos", "🎨"],
-        ["Foamy brillante", "✨"],
-        ["Foamy moldeable", "🧩"],
-        ["Plasticina", "🟣"]
-      ]
-    },
+  adhesivos: {
+    title: "Adhesivos y Cintas",
+    icon: "🧴",
+    description:
+      "Todo lo necesario para pegar, unir y realizar tus proyectos.",
+    products: [
+      ["Goma blanca", "🧴"],
+      ["Goma en barra", "🖊️"],
+      ["Masking tape", "🎞️"],
+      ["Silicón en barra", "🧴"],
+      ["Silicón líquido", "🧴"],
+      ["Tape delgado", "📏"],
+      ["Tape grueso", "📦"]
+    ]
+  },
 
+  escritura: {
+    title: "Escritura y Dibujo",
+    icon: "✏️",
+    description:
+      "Útiles para escribir, dibujar, estudiar y trabajar.",
+    products: [
+      ["Borradores", "◽"],
+      ["Correctores", "📝"],
+      ["Crayones", "🖍️"],
+      ["Lapiceros", "🖊️"],
+      ["Lápices", "✏️"],
+      ["Marcadores", "🖍️"],
+      ["Marcadores para pizarrón", "🖊️"],
+      ["Resaltadores", "🖍️"]
+    ]
+  },
 
-    adhesivos: {
-      title: "Adhesivos y Cintas",
-      icon: "🧴",
-      description:
-        "Todo lo necesario para pegar, unir y realizar tus proyectos.",
-      products: [
-        ["Silicon en barra", "🧴"],
-        ["Silicon líquido", "🧴"],
-        ["Goma en barra", "🖊️"],
-        ["Goma blanca", "🧴"],
-        ["Tape grueso", "📦"],
-        ["Tape delgado", "📏"],
-        ["Masking tape", "🎞️"]
-      ]
-    },
+  herramientas: {
+    title: "Corte y Herramientas",
+    icon: "✂️",
+    description:
+      "Herramientas para trabajos escolares, oficina y manualidades.",
+    products: [
+      ["Compás", "📐"],
+      ["Cuchillas", "✂️"],
+      ["Engrapadora", "📎"],
+      ["Estuche geométrico con reglas", "📐"],
+      ["Pistola de silicón", "🔧"],
+      ["Reglas", "📏"],
+      ["Tijeras", "✂️"]
+    ]
+  },
 
+  archivo: {
+    title: "Archivo y Organización",
+    icon: "📁",
+    description:
+      "Productos para organizar documentos y materiales.",
+    products: [
+      ["Clips", "📎"],
+      ["Engrapadoras", "📎"],
+      ["Fólder color natural", "📁"],
+      ["Fólderes de colores", "📁"],
+      ["Ganchos de colores", "📎"],
+      ["Grapas", "🔗"],
+      ["Sobres Manila", "✉️"],
+      ["Sobres tamaño carta", "✉️"],
+      ["Sticky Notes / Post-its", "🗒️"]
+    ]
+  },
 
-    escritura: {
-      title: "Escritura y Dibujo",
-      icon: "✏️",
-      description:
-        "Útiles para escribir, dibujar, estudiar y trabajar.",
-      products: [
-        ["Lápices", "✏️"],
-        ["Lapiceros", "🖊️"],
-        ["Marcadores", "🖍️"],
-        ["Marcadores para pizarrón", "🖊️"],
-        ["Resaltadores", "🖍️"],
-        ["Crayones", "🖍️"],
-        ["Correctores", "📝"],
-        ["Borradores", "◽"]
-      ]
-    },
+  regalo: {
+    title: "Empaque y Regalo",
+    icon: "🎁",
+    description:
+      "Opciones para presentar y entregar tus regalos.",
+    products: [
+      ["Bolsas de regalo de papel Kraft", "🎁"]
+    ]
+  }
 
-
-    herramientas: {
-      title: "Corte y Herramientas",
-      icon: "✂️",
-      description:
-        "Herramientas para trabajos escolares, oficina y manualidades.",
-      products: [
-        ["Tijeras", "✂️"],
-        ["Cuchillas", "🔪"],
-        ["Reglas", "📏"],
-        ["Compás", "📐"],
-        ["Estuche geométrico con reglas", "📐"],
-        ["Pistola de silicon", "🔫"]
-      ]
-    },
-
-
-    archivo: {
-      title: "Archivo y Organización",
-      icon: "📁",
-      description:
-        "Productos para organizar documentos y materiales.",
-      products: [
-        ["Fólderes de colores", "📁"],
-        ["Fólder color natural", "📁"],
-        ["Sobres Manila", "✉️"],
-        ["Sobres tamaño carta", "✉️"],
-        ["Ganchos de colores", "📎"],
-        ["Clips", "📎"],
-        ["Grapas", "🔗"],
-        ["Engrapadoras", "📎"],
-        ["Sticky Notes / Post-its", "🗒️"]
-      ]
-    },
-
-
-    regalo: {
-      title: "Empaque y Regalo",
-      icon: "🎁",
-      description:
-        "Opciones para presentar y entregar tus regalos.",
-      products: [
-        ["Bolsas de regalo de papel Kraft", "🎁"]
-      ]
-    }
-
-  };
-
+};
 
   /* =========================
      CREAR CATEGORÍAS
