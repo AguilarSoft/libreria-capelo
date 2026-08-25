@@ -44,8 +44,16 @@
 
     header {
       background:
-        radial-gradient(circle at 8% 20%, rgba(241,90,10,.10), transparent 20%),
-        radial-gradient(circle at 92% 15%, rgba(9,43,76,.08), transparent 25%),
+        radial-gradient(
+          circle at 8% 20%,
+          rgba(241, 90, 10, .10),
+          transparent 20%
+        ),
+        radial-gradient(
+          circle at 92% 15%,
+          rgba(9, 43, 76, .08),
+          transparent 25%
+        ),
         var(--cream);
 
       text-align: center;
@@ -146,13 +154,13 @@
       padding: 18px;
       cursor: pointer;
       transition: .2s ease;
-      box-shadow: 0 5px 18px rgba(9,43,76,.06);
+      box-shadow: 0 5px 18px rgba(9, 43, 76, .06);
     }
 
     .category-card:hover {
       transform: translateY(-4px);
       border-color: var(--orange);
-      box-shadow: 0 10px 25px rgba(9,43,76,.12);
+      box-shadow: 0 10px 25px rgba(9, 43, 76, .12);
     }
 
     .category-icon {
@@ -206,7 +214,7 @@
       color: var(--text);
       font-size: 16px;
       outline: none;
-      box-shadow: 0 5px 18px rgba(9,43,76,.05);
+      box-shadow: 0 5px 18px rgba(9, 43, 76, .05);
     }
 
     .search:focus {
@@ -269,13 +277,13 @@
       font-size: 14px;
       font-weight: 700;
       color: var(--text);
-      box-shadow: 0 3px 10px rgba(9,43,76,.04);
+      box-shadow: 0 3px 10px rgba(9, 43, 76, .04);
       transition: .18s ease;
     }
 
     .product:hover {
       transform: translateY(-2px);
-      box-shadow: 0 7px 18px rgba(9,43,76,.10);
+      box-shadow: 0 7px 18px rgba(9, 43, 76, .10);
       border-left-color: var(--navy);
     }
 
@@ -296,86 +304,77 @@
     ========================= */
 
     .service-main {
-  width: 100%;
-  background: var(--navy);
-  color: white;
-  border-radius: 16px;
-  padding: 22px 25px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  cursor: pointer;
-  border-bottom: 4px solid var(--orange);
-  transition: .2s ease;
-}
-
-.service-main:hover {
-  transform: translateY(-3px);
-  background: var(--navy-dark);
-}
-
-.service-main-icon {
-  width: 52px;
-  height: 52px;
-  min-width: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--orange);
-  border-radius: 13px;
-  font-size: 27px;
-}
-
-.service-main h3 {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
-.service-main p {
-  color: #dbe7f3;
-  font-size: 14px;
-}
-
-.service-arrow {
-  margin-left: auto;
-  font-size: 28px;
-  color: var(--orange);
-}
-    .services {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 13px;
-    }
-
-    .service-card {
+      width: 100%;
       background: var(--navy);
       color: white;
-      border-radius: 15px;
-      padding: 22px 18px;
+      border-radius: 16px;
+      padding: 22px 25px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
       cursor: pointer;
+      border-bottom: 5px solid var(--orange);
       transition: .2s ease;
-      border-bottom: 4px solid var(--orange);
+      box-shadow: 0 5px 15px rgba(9, 43, 76, .10);
     }
 
-    .service-card:hover {
-      transform: translateY(-4px);
+    .service-main:hover {
+      transform: translateY(-3px);
       background: var(--navy-dark);
     }
 
-    .service-icon {
-      font-size: 29px;
-      margin-bottom: 13px;
+    .service-main-icon {
+      width: 52px;
+      height: 52px;
+      min-width: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--orange);
+      border-radius: 13px;
+      font-size: 27px;
     }
 
-    .service-card h3 {
-      font-size: 18px;
-      margin-bottom: 6px;
+    .service-main h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
     }
 
-    .service-card p {
+    .service-main p {
       color: #dbe7f3;
-      font-size: 13px;
-      line-height: 1.4;
+      font-size: 14px;
+    }
+
+    .service-arrow {
+      margin-left: auto;
+      font-size: 28px;
+      color: var(--orange);
+    }
+
+    .service-detail {
+      background: white;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--orange);
+      border-radius: 15px;
+      padding: 24px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 14px rgba(9, 43, 76, .05);
+    }
+
+    .service-detail-icon {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .service-detail h3 {
+      color: var(--navy);
+      font-size: 21px;
+      margin-bottom: 7px;
+    }
+
+    .service-detail p {
+      color: var(--muted);
+      line-height: 1.5;
     }
 
     /* =========================
@@ -407,7 +406,11 @@
 
     .detail-header {
       background:
-        linear-gradient(135deg, var(--navy), #123f67);
+        linear-gradient(
+          135deg,
+          var(--navy),
+          #123f67
+        );
       color: white;
       border-radius: 18px;
       padding: 30px;
@@ -428,32 +431,6 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 13px;
-    }
-
-    .service-detail {
-      background: white;
-      border: 1px solid var(--border);
-      border-left: 5px solid var(--orange);
-      border-radius: 15px;
-      padding: 24px;
-      margin-bottom: 14px;
-      box-shadow: 0 4px 14px rgba(9,43,76,.05);
-    }
-
-    .service-detail-icon {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .service-detail h3 {
-      color: var(--navy);
-      font-size: 21px;
-      margin-bottom: 7px;
-    }
-
-    .service-detail p {
-      color: var(--muted);
-      line-height: 1.5;
     }
 
     /* =========================
@@ -483,7 +460,7 @@
       padding: 15px 21px;
       border-radius: 50px;
       font-weight: 900;
-      box-shadow: 0 7px 25px rgba(0,0,0,.22);
+      box-shadow: 0 7px 25px rgba(0, 0, 0, .22);
       z-index: 100;
       transition: .2s;
     }
@@ -539,10 +516,6 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .services {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
       .detail-products {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -580,7 +553,6 @@
 
       .category-selector,
       .products,
-      .services,
       .detail-products {
         grid-template-columns: 1fr;
       }
@@ -593,6 +565,22 @@
         font-size: 25px;
       }
 
+      .service-main {
+        padding: 18px;
+      }
+
+      .service-main h3 {
+        font-size: 17px;
+      }
+
+      .service-main p {
+        font-size: 13px;
+      }
+
+      .service-arrow {
+        font-size: 23px;
+      }
+
       .whatsapp {
         right: 14px;
         bottom: 14px;
@@ -603,505 +591,748 @@
 
 <body>
 
-<header>
+  <!-- =========================
+       HEADER
+  ========================= -->
 
-  <div class="brand-small">
-    Librería
-  </div>
+  <header>
 
-  <div class="brand-name">
-    capelo
-  </div>
+    <div class="brand-small">
+      Librería
+    </div>
 
-  <div class="brand-line"></div>
+    <div class="brand-name">
+      capelo
+    </div>
 
-  <div class="tagline">
-    IDEAS + <span>COLOR</span> = CREACIÓN
-  </div>
+    <div class="brand-line"></div>
 
-</header>
+    <div class="tagline">
+      IDEAS + <span>COLOR</span> = CREACIÓN
+    </div>
 
-
-<!-- =========================
-     INICIO
-========================= -->
-
-<main id="home" class="container">
-
-  <div class="welcome">
-
-    <h1>
-      Lo que necesitas, en un solo lugar
-    </h1>
-
-    <p>
-      Explora nuestros productos y servicios.
-    </p>
-
-  </div>
+  </header>
 
 
-  <!-- CATEGORÍAS -->
+  <!-- =========================
+       INICIO
+  ========================= -->
 
-  <h2 class="section-title">
-    Explorar por categoría
-  </h2>
+  <main id="home" class="container">
 
-  <div id="categorySelector" class="category-selector"></div>
+    <div class="welcome">
 
-
-  <!-- BUSCADOR GENERAL -->
-
-  <h2 class="section-title">
-    Catálogo completo
-  </h2>
-
-  <div class="search-wrapper">
-
-    <span class="search-icon">
-      ⌕
-    </span>
-
-    <input
-      type="text"
-      id="globalSearch"
-      class="search"
-      placeholder="Buscar cualquier producto..."
-    >
-
-  </div>
-
-
-  <div id="fullCatalog"></div>
-
-  <div id="globalNoResults" class="no-results">
-    No encontramos ese producto.
-  </div>
-
-
-  <!-- SERVICIOS -->
-<h2 class="section-title">
-  Servicios
-</h2>
-
-<div
-  class="service-card service-main"
-  onclick="showServices()"
->
-  <div class="service-main-icon">
-    🖨️
-  </div>
-
-  <div>
-    <h3>Copias, Impresiones y Scan</h3>
-
-    <p>
-      Copias · Impresiones monocromáticas · Impresiones a color · Scan
-    </p>
-  </div>
-
-  <span class="service-arrow">
-    →
-  </span>
-</div>
-
-
-<!-- =========================
-     DETALLE DE CATEGORÍA
-========================= -->
-
-<main id="detail" class="container">
-
-  <button
-    class="back-button"
-    onclick="goHome()"
-  >
-    ← Volver al catálogo
-  </button>
-
-
-  <div class="detail-header">
-
-    <h2 id="detailTitle"></h2>
-
-    <p id="detailDescription"></p>
-
-  </div>
-
-
-  <div class="search-wrapper" id="detailSearchWrapper">
-
-    <span class="search-icon">
-      ⌕
-    </span>
-
-    <input
-      type="text"
-      id="detailSearch"
-      class="search"
-      placeholder="Buscar producto..."
-    >
-
-  </div>
-
-
-  <div
-    id="detailProducts"
-    class="detail-products"
-  ></div>
-
-
-  <div
-    id="detailNoResults"
-    class="no-results"
-  >
-    No encontramos ese producto.
-  </div>
-
-
-  <!-- SERVICIOS -->
-
-  <div id="servicesList">
-
-    <div class="service-detail">
-
-      <div class="service-detail-icon">
-        📄
-      </div>
-
-      <h3>
-        Copias
-      </h3>
+      <h1>
+        Lo que necesitas, en un solo lugar
+      </h1>
 
       <p>
-        Servicio de copias para documentos,
-        tareas y material de trabajo.
+        Explora nuestros productos y servicios.
       </p>
 
     </div>
 
 
-    <div class="service-detail">
+    <!-- CATEGORÍAS -->
 
-      <div class="service-detail-icon">
+    <h2 class="section-title">
+      Explorar por categoría
+    </h2>
+
+    <div
+      id="categorySelector"
+      class="category-selector"
+    ></div>
+
+
+    <!-- SERVICIOS -->
+
+    <h2 class="section-title">
+      Servicios
+    </h2>
+
+    <div
+      class="service-card service-main"
+      onclick="showServices()"
+    >
+
+      <div class="service-main-icon">
         🖨️
       </div>
 
-      <h3>
-        Impresiones monocromáticas
-      </h3>
+      <div>
 
-      <p>
-        Impresiones en blanco y negro
-        para documentos y trabajos.
-      </p>
+        <h3>
+          Copias, Impresiones y Scan
+        </h3>
 
-    </div>
+        <p>
+          Copias · Impresiones monocromáticas ·
+          Impresiones a color · Scan
+        </p>
 
-
-    <div class="service-detail">
-
-      <div class="service-detail-icon">
-        🖨️
       </div>
 
-      <h3>
-        Impresiones a color
-      </h3>
-
-      <p>
-        Impresiones a color para trabajos,
-        documentos, proyectos y materiales.
-      </p>
-
-    </div>
-
-
-    <div class="service-detail">
-
-      <div class="service-detail-icon">
-        📑
-      </div>
-
-      <h3>
-        Scan
-      </h3>
-
-      <p>
-        Digitalización de documentos
-        para convertirlos en archivos digitales.
-      </p>
-
-    </div>
-
-  </div>
-
-</main>
-
-
-<a
-  class="whatsapp"
-  href="https://wa.me/50232830940"
-  target="_blank"
->
-  WhatsApp
-</a>
-
-
-<footer>
-
-  <div class="footer-brand">
-    Librería capelo
-  </div>
-
-  <div class="footer-text">
-    Papelería · Útiles escolares · Manualidades · Servicios
-  </div>
-
-  <div class="footer-slogan">
-    Ideas + <span>color</span> = creación
-  </div>
-
-</footer>
-
-
-<script>
-
-  /* =========================
-     CATÁLOGO
-  ========================= */
-
- const data = {
-
-  papeles: {
-    title: "Papeles y Cartulinas",
-    icon: "📄",
-    description:
-      "Diferentes tipos de papel, cartulinas y hojas para tus proyectos.",
-    products: [
-      ["Ariel Cover — blanco 180 g", "📄"],
-      ["Ariel Cover — colores", "🎨"],
-      ["Cartulinas — blancas", "⬜"],
-      ["Cartulinas — colores", "🌈"],
-      ["Hojas blancas — 75 g, carta y oficio", "📄"],
-      ["Hojas blancas — 90 g, carta y oficio", "📄"],
-      ["Hojas blancas — 120 g, carta y oficio", "📄"],
-      ["Hojas cuadriculadas — carta", "▦"],
-      ["Hojas de líneas — carta", "📝"],
-      ["Hojas milimetradas", "📐"],
-      ["Papel acuarela", "🖌️"],
-      ["Papel arcoíris — colores", "🌈"],
-      ["Papel arcoíris con textura — colores", "🌈"],
-      ["Papel China — colores", "🎨"],
-      ["Papel construcción — colores", "🟦"],
-      ["Papel Kraft", "🟫"],
-      ["Papel lino", "📜"],
-      ["Papel opalina — 230 g", "📑"]
-    ]
-  },
-
-  foamy: {
-    title: "Foamy y Manualidades",
-    icon: "🎨",
-    description:
-      "Materiales para manualidades, decoración y proyectos creativos.",
-    products: [
-      ["Foamy — brillante", "✨"],
-      ["Foamy — colores surtidos", "🎨"],
-      ["Foamy — moldeable", "🧩"],
-      ["Plasticina", "🟣"]
-    ]
-  },
-
-  adhesivos: {
-    title: "Adhesivos y Cintas",
-    icon: "🧴",
-    description:
-      "Todo lo necesario para pegar, unir y realizar tus proyectos.",
-    products: [
-      ["Goma blanca", "🧴"],
-      ["Goma en barra", "🖊️"],
-      ["Masking tape", "🎞️"],
-      ["Silicón en barra", "🧴"],
-      ["Silicón líquido", "🧴"],
-      ["Tape delgado", "📏"],
-      ["Tape grueso", "📦"]
-    ]
-  },
-
-  escritura: {
-    title: "Escritura y Dibujo",
-    icon: "✏️",
-    description:
-      "Útiles para escribir, dibujar, estudiar y trabajar.",
-    products: [
-      ["Borradores", "◽"],
-      ["Correctores", "📝"],
-      ["Crayones", "🖍️"],
-      ["Lapiceros", "🖊️"],
-      ["Lápices", "✏️"],
-      ["Marcadores", "🖍️"],
-      ["Marcadores para pizarrón", "🖊️"],
-      ["Resaltadores", "🖍️"]
-    ]
-  },
-
-  herramientas: {
-    title: "Corte y Herramientas",
-    icon: "✂️",
-    description:
-      "Herramientas para trabajos escolares, oficina y manualidades.",
-    products: [
-      ["Compás", "📐"],
-      ["Cuchillas", "✂️"],
-      ["Engrapadora", "📎"],
-      ["Estuche geométrico con reglas", "📐"],
-      ["Pistola de silicón", "🔧"],
-      ["Reglas", "📏"],
-      ["Tijeras", "✂️"]
-    ]
-  },
-
-  archivo: {
-    title: "Archivo y Organización",
-    icon: "📁",
-    description:
-      "Productos para organizar documentos y materiales.",
-    products: [
-      ["Clips", "📎"],
-      ["Engrapadoras", "📎"],
-      ["Fólder color natural", "📁"],
-      ["Fólderes de colores", "📁"],
-      ["Ganchos de colores", "📎"],
-      ["Grapas", "🔗"],
-      ["Sobres Manila", "✉️"],
-      ["Sobres tamaño carta", "✉️"],
-      ["Sticky Notes / Post-its", "🗒️"]
-    ]
-  },
-
-  regalo: {
-    title: "Empaque y Regalo",
-    icon: "🎁",
-    description:
-      "Opciones para presentar y entregar tus regalos.",
-    products: [
-      ["Bolsas de regalo de papel Kraft", "🎁"]
-    ]
-  }
-
-};
-
-  /* =========================
-     CREAR CATEGORÍAS
-  ========================= */
-
-  const categorySelector =
-    document.getElementById("categorySelector");
-
-  Object.keys(data).forEach(key => {
-
-    const category = data[key];
-
-    const card =
-      document.createElement("div");
-
-    card.className = "category-card";
-
-    card.onclick = () => showCategory(key);
-
-    card.innerHTML = `
-      <div class="category-icon">
-        ${category.icon}
-      </div>
-
-      <h3>
-        ${category.title}
-      </h3>
-
-      <p>
-        ${category.description}
-      </p>
-
-      <span class="view">
-        Ver productos →
+      <span class="service-arrow">
+        →
       </span>
-    `;
 
-    categorySelector.appendChild(card);
-
-  });
+    </div>
 
 
-  /* =========================
-     CATÁLOGO COMPLETO
-  ========================= */
+    <!-- CATÁLOGO COMPLETO -->
 
-  const fullCatalog =
-    document.getElementById("fullCatalog");
+    <h2 class="section-title">
+      Catálogo completo
+    </h2>
+
+    <div class="search-wrapper">
+
+      <span class="search-icon">
+        ⌕
+      </span>
+
+      <input
+        type="text"
+        id="globalSearch"
+        class="search"
+        placeholder="Buscar cualquier producto..."
+      >
+
+    </div>
 
 
-  function renderFullCatalog(filter = "") {
+    <div id="fullCatalog"></div>
 
-    fullCatalog.innerHTML = "";
+    <div
+      id="globalNoResults"
+      class="no-results"
+    >
+      No encontramos ese producto.
+    </div>
 
-    let totalFound = 0;
+  </main>
+
+
+  <!-- =========================
+       DETALLE
+  ========================= -->
+
+  <main
+    id="detail"
+    class="container"
+  >
+
+    <button
+      class="back-button"
+      onclick="goHome()"
+    >
+      ← Volver al catálogo
+    </button>
+
+
+    <div class="detail-header">
+
+      <h2 id="detailTitle"></h2>
+
+      <p id="detailDescription"></p>
+
+    </div>
+
+
+    <!-- BUSCADOR DE CATEGORÍA -->
+
+    <div
+      class="search-wrapper"
+      id="detailSearchWrapper"
+    >
+
+      <span class="search-icon">
+        ⌕
+      </span>
+
+      <input
+        type="text"
+        id="detailSearch"
+        class="search"
+        placeholder="Buscar producto..."
+      >
+
+    </div>
+
+
+    <!-- PRODUCTOS DE CATEGORÍA -->
+
+    <div
+      id="detailProducts"
+      class="detail-products"
+    ></div>
+
+
+    <div
+      id="detailNoResults"
+      class="no-results"
+    >
+      No encontramos ese producto.
+    </div>
+
+
+    <!-- SERVICIOS -->
+
+    <div id="servicesList">
+
+      <div class="service-detail">
+
+        <div class="service-detail-icon">
+          📄
+        </div>
+
+        <h3>
+          Copias
+        </h3>
+
+        <p>
+          Servicio de copias para documentos,
+          tareas y material de trabajo.
+        </p>
+
+      </div>
+
+
+      <div class="service-detail">
+
+        <div class="service-detail-icon">
+          🖨️
+        </div>
+
+        <h3>
+          Impresiones monocromáticas
+        </h3>
+
+        <p>
+          Impresiones en blanco y negro
+          para documentos y trabajos.
+        </p>
+
+      </div>
+
+
+      <div class="service-detail">
+
+        <div class="service-detail-icon">
+          🖨️
+        </div>
+
+        <h3>
+          Impresiones a color
+        </h3>
+
+        <p>
+          Impresiones a color para trabajos,
+          documentos, proyectos y materiales.
+        </p>
+
+      </div>
+
+
+      <div class="service-detail">
+
+        <div class="service-detail-icon">
+          📑
+        </div>
+
+        <h3>
+          Scan
+        </h3>
+
+        <p>
+          Digitalización de documentos
+          para convertirlos en archivos digitales.
+        </p>
+
+      </div>
+
+    </div>
+
+  </main>
+
+
+  <!-- WHATSAPP -->
+
+  <a
+    class="whatsapp"
+    href="https://wa.me/50232830940"
+    target="_blank"
+  >
+    WhatsApp
+  </a>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-brand">
+      Librería capelo
+    </div>
+
+    <div class="footer-text">
+      Papelería · Útiles escolares · Manualidades · Servicios
+    </div>
+
+    <div class="footer-slogan">
+      Ideas + <span>color</span> = creación
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    /* =========================
+       CATÁLOGO
+    ========================= */
+
+    const data = {
+
+      papeles: {
+        title: "Papeles y Cartulinas",
+        icon: "📄",
+        description:
+          "Diferentes tipos de papel, cartulinas y hojas para tus proyectos.",
+
+        products: [
+          ["Ariel Cover — blanco 180 g", "📄"],
+          ["Ariel Cover — colores", "🎨"],
+          ["Cartulinas — blancas", "⬜"],
+          ["Cartulinas — colores", "🌈"],
+          ["Hojas blancas — 75 g, carta y oficio", "📄"],
+          ["Hojas blancas — 90 g, carta y oficio", "📄"],
+          ["Hojas blancas — 120 g, carta y oficio", "📄"],
+          ["Hojas cuadriculadas — carta", "▦"],
+          ["Hojas de líneas — carta", "📝"],
+          ["Hojas milimetradas", "📐"],
+          ["Papel acuarela", "🖌️"],
+          ["Papel arcoíris — colores", "🌈"],
+          ["Papel arcoíris con textura — colores", "🌈"],
+          ["Papel China — colores", "🎨"],
+          ["Papel construcción — colores", "🟦"],
+          ["Papel Kraft", "🟫"],
+          ["Papel lino", "📜"],
+          ["Papel opalina — 230 g", "📑"]
+        ]
+      },
+
+
+      foamy: {
+        title: "Foamy y Manualidades",
+        icon: "🎨",
+        description:
+          "Materiales para manualidades, decoración y proyectos creativos.",
+
+        products: [
+          ["Foamy — brillante", "✨"],
+          ["Foamy — colores surtidos", "🎨"],
+          ["Foamy — moldeable", "🧩"],
+          ["Plasticina", "🟣"]
+        ]
+      },
+
+
+      adhesivos: {
+        title: "Adhesivos y Cintas",
+        icon: "🧴",
+        description:
+          "Todo lo necesario para pegar, unir y realizar tus proyectos.",
+
+        products: [
+          ["Goma blanca", "🧴"],
+          ["Goma en barra", "🖊️"],
+          ["Masking tape", "🎞️"],
+          ["Silicón en barra", "🧴"],
+          ["Silicón líquido", "🧴"],
+          ["Tape delgado", "📏"],
+          ["Tape grueso", "📦"]
+        ]
+      },
+
+
+      escritura: {
+        title: "Escritura y Dibujo",
+        icon: "✏️",
+        description:
+          "Útiles para escribir, dibujar, estudiar y trabajar.",
+
+        products: [
+          ["Borradores", "◽"],
+          ["Correctores", "📝"],
+          ["Crayones", "🖍️"],
+          ["Lapiceros", "🖊️"],
+          ["Lápices", "✏️"],
+          ["Marcadores", "🖍️"],
+          ["Marcadores para pizarrón", "🖊️"],
+          ["Resaltadores", "🖍️"]
+        ]
+      },
+
+
+      herramientas: {
+        title: "Corte y Herramientas",
+        icon: "✂️",
+        description:
+          "Herramientas para trabajos escolares, oficina y manualidades.",
+
+        products: [
+          ["Compás", "📐"],
+          ["Cuchillas", "✂️"],
+          ["Engrapadora", "📎"],
+          ["Estuche geométrico con reglas", "📐"],
+          ["Pistola de silicón", "🔧"],
+          ["Reglas", "📏"],
+          ["Tijeras", "✂️"]
+        ]
+      },
+
+
+      archivo: {
+        title: "Archivo y Organización",
+        icon: "📁",
+        description:
+          "Productos para organizar documentos y materiales.",
+
+        products: [
+          ["Clips", "📎"],
+          ["Engrapadoras", "📎"],
+          ["Fólder color natural", "📁"],
+          ["Fólderes de colores", "📁"],
+          ["Ganchos de colores", "📎"],
+          ["Grapas", "🔗"],
+          ["Sobres Manila", "✉️"],
+          ["Sobres tamaño carta", "✉️"],
+          ["Sticky Notes / Post-its", "🗒️"]
+        ]
+      },
+
+
+      regalo: {
+        title: "Empaque y Regalo",
+        icon: "🎁",
+        description:
+          "Opciones para presentar y entregar tus regalos.",
+
+        products: [
+          ["Bolsas de regalo de papel Kraft", "🎁"]
+        ]
+      }
+
+    };
+
+
+    /* =========================
+       CREAR CATEGORÍAS
+    ========================= */
+
+    const categorySelector =
+      document.getElementById("categorySelector");
+
 
     Object.keys(data).forEach(key => {
 
       const category = data[key];
 
-      const filteredProducts =
-        category.products.filter(item =>
-          item[0]
-            .toLowerCase()
-            .includes(filter.toLowerCase())
+      const card =
+        document.createElement("div");
+
+      card.className =
+        "category-card";
+
+      card.onclick =
+        () => showCategory(key);
+
+      card.innerHTML = `
+
+        <div class="category-icon">
+          ${category.icon}
+        </div>
+
+        <h3>
+          ${category.title}
+        </h3>
+
+        <p>
+          ${category.description}
+        </p>
+
+        <span class="view">
+          Ver productos →
+        </span>
+
+      `;
+
+      categorySelector.appendChild(card);
+
+    });
+
+
+    /* =========================
+       CATÁLOGO COMPLETO
+    ========================= */
+
+    const fullCatalog =
+      document.getElementById("fullCatalog");
+
+
+    function renderFullCatalog(filter = "") {
+
+      fullCatalog.innerHTML = "";
+
+      let totalFound = 0;
+
+
+      Object.keys(data).forEach(key => {
+
+        const category = data[key];
+
+
+        const filteredProducts =
+          category.products.filter(item =>
+            item[0]
+              .toLowerCase()
+              .includes(filter.toLowerCase())
+          );
+
+
+        if (
+          filteredProducts.length === 0
+        ) {
+          return;
+        }
+
+
+        totalFound +=
+          filteredProducts.length;
+
+
+        const section =
+          document.createElement("section");
+
+        section.className =
+          "catalog-section";
+
+
+        const title =
+          document.createElement("h3");
+
+        title.className =
+          "catalog-category-title";
+
+
+        title.innerHTML = `
+
+          <span>
+            ${category.icon}
+          </span>
+
+          ${category.title}
+
+        `;
+
+
+        section.appendChild(title);
+
+
+        const products =
+          document.createElement("div");
+
+        products.className =
+          "products";
+
+
+        filteredProducts.forEach(item => {
+
+          const product =
+            document.createElement("div");
+
+          product.className =
+            "product";
+
+
+          product.innerHTML = `
+
+            <span class="product-icon">
+              ${item[1]}
+            </span>
+
+            <span>
+              ${item[0]}
+            </span>
+
+          `;
+
+
+          products.appendChild(product);
+
+        });
+
+
+        section.appendChild(products);
+
+        fullCatalog.appendChild(section);
+
+      });
+
+
+      document.getElementById(
+        "globalNoResults"
+      ).style.display =
+        totalFound === 0
+          ? "block"
+          : "none";
+
+    }
+
+
+    renderFullCatalog();
+
+
+    /* =========================
+       BUSCADOR GENERAL
+    ========================= */
+
+    document
+      .getElementById("globalSearch")
+      .addEventListener(
+        "input",
+        function () {
+
+          renderFullCatalog(
+            this.value
+          );
+
+        }
+      );
+
+
+    /* =========================
+       MOSTRAR CATEGORÍA
+    ========================= */
+
+    function showCategory(categoryKey) {
+
+      const category =
+        data[categoryKey];
+
+
+      document.getElementById("home")
+        .style.display = "none";
+
+
+      document.getElementById("detail")
+        .style.display = "block";
+
+
+      document.getElementById(
+        "detailTitle"
+      ).textContent =
+        category.title;
+
+
+      document.getElementById(
+        "detailDescription"
+      ).textContent =
+        category.description;
+
+
+      document.getElementById(
+        "detailSearch"
+      ).value = "";
+
+
+      document.getElementById(
+        "servicesList"
+      ).style.display = "none";
+
+
+      document.getElementById(
+        "detailSearchWrapper"
+      ).style.display = "block";
+
+
+      document.getElementById(
+        "detailProducts"
+      ).style.display = "grid";
+
+
+      renderDetailProducts(
+        category
+      );
+
+
+      /*
+       * Al entrar a una categoría,
+       * baja directamente a los productos.
+       */
+
+      setTimeout(() => {
+
+        document
+          .getElementById("detailProducts")
+          .scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+      }, 100);
+
+    }
+
+
+    /* =========================
+       PRODUCTOS DEL DETALLE
+    ========================= */
+
+    function renderDetailProducts(
+      category,
+      filter = ""
+    ) {
+
+      const list =
+        document.getElementById(
+          "detailProducts"
         );
 
 
-      if (filteredProducts.length === 0) {
-        return;
-      }
+      list.innerHTML = "";
+
+      let found = 0;
 
 
-      totalFound += filteredProducts.length;
+      category.products.forEach(item => {
+
+        if (
+          !item[0]
+            .toLowerCase()
+            .includes(
+              filter.toLowerCase()
+            )
+        ) {
+          return;
+        }
 
 
-      const section =
-        document.createElement("section");
+        found++;
 
-      section.className = "catalog-section";
-
-
-      const title =
-        document.createElement("h3");
-
-      title.className =
-        "catalog-category-title";
-
-      title.innerHTML = `
-        <span>${category.icon}</span>
-        ${category.title}
-      `;
-
-
-      section.appendChild(title);
-
-
-      const products =
-        document.createElement("div");
-
-      products.className = "products";
-
-
-      filteredProducts.forEach(item => {
 
         const product =
           document.createElement("div");
 
-        product.className = "product";
+
+        product.className =
+          "product";
+
 
         product.innerHTML = `
+
           <span class="product-icon">
             ${item[1]}
           </span>
@@ -1109,285 +1340,245 @@
           <span>
             ${item[0]}
           </span>
+
         `;
 
-        products.appendChild(product);
+
+        list.appendChild(product);
 
       });
 
 
-      section.appendChild(products);
-
-      fullCatalog.appendChild(section);
-
-    });
-
-
-    document.getElementById("globalNoResults")
-      .style.display =
-        totalFound === 0
-          ? "block"
-          : "none";
-  }
-
-
-  renderFullCatalog();
-
-
-  /* =========================
-     BUSCADOR GENERAL
-  ========================= */
-
-  document
-    .getElementById("globalSearch")
-    .addEventListener("input", function () {
-
-      renderFullCatalog(this.value);
-
-    });
-
-
-  /* =========================
-     MOSTRAR CATEGORÍA
-  ========================= */
-
-  function showCategory(categoryKey) {
-
-    const category =
-      data[categoryKey];
-
-
-    document.getElementById("home")
-      .style.display = "none";
-
-    document.getElementById("detail")
-      .style.display = "block";
-
-
-    document.getElementById("detailTitle")
-      .textContent =
-        category.title;
-
-
-    document.getElementById("detailDescription")
-      .textContent =
-        category.description;
-
-
-    document.getElementById("detailSearch")
-      .value = "";
-
-
-    document.getElementById("servicesList")
-      .style.display = "none";
-
-
-    document.getElementById("detailSearchWrapper")
-      .style.display = "block";
-
-
-    document.getElementById("detailProducts")
-      .style.display = "grid";
-
-
-    renderDetailProducts(category);
-
-
-  setTimeout(() => {
-    document.getElementById("detailProducts").scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  }, 100);
-
-  }
-
-
-  /* =========================
-     PRODUCTOS DEL DETALLE
-  ========================= */
-
-  function renderDetailProducts(category, filter = "") {
-
-    const list =
-      document.getElementById("detailProducts");
-
-    list.innerHTML = "";
-
-    let found = 0;
-
-
-    category.products.forEach(item => {
-
-      if (
-        !item[0]
-          .toLowerCase()
-          .includes(filter.toLowerCase())
-      ) {
-        return;
-      }
-
-
-      found++;
-
-
-      const product =
-        document.createElement("div");
-
-      product.className = "product";
-
-
-      product.innerHTML = `
-        <span class="product-icon">
-          ${item[1]}
-        </span>
-
-        <span>
-          ${item[0]}
-        </span>
-      `;
-
-
-      list.appendChild(product);
-
-    });
-
-
-    document.getElementById("detailNoResults")
-      .style.display =
+      document.getElementById(
+        "detailNoResults"
+      ).style.display =
         found === 0
           ? "block"
           : "none";
 
-  }
+    }
 
 
-  /* =========================
-     BUSCADOR DE CATEGORÍA
-  ========================= */
+    /* =========================
+       BUSCADOR DE CATEGORÍA
+    ========================= */
 
-  let currentCategory = null;
-
-
-  const originalShowCategory =
-    showCategory;
+    let currentCategory = null;
 
 
-  window.showCategory = function(categoryKey) {
-
-    currentCategory =
-      data[categoryKey];
-
-    originalShowCategory(categoryKey);
-
-  };
+    const originalShowCategory =
+      showCategory;
 
 
-  document
-    .getElementById("detailSearch")
-    .addEventListener("input", function () {
+    window.showCategory =
+      function(categoryKey) {
 
-      if (!currentCategory) {
-        return;
-      }
+        currentCategory =
+          data[categoryKey];
+
+        originalShowCategory(
+          categoryKey
+        );
+
+      };
 
 
-      renderDetailProducts(
-        currentCategory,
-        this.value
+    document
+      .getElementById("detailSearch")
+      .addEventListener(
+        "input",
+        function () {
+
+          if (!currentCategory) {
+            return;
+          }
+
+
+          renderDetailProducts(
+            currentCategory,
+            this.value
+          );
+
+        }
       );
 
-    });
+
+    /* =========================
+       SERVICIOS
+    ========================= */
+
+    function showServices() {
+
+      const home =
+        document.getElementById(
+          "home"
+        );
+
+      const detail =
+        document.getElementById(
+          "detail"
+        );
 
 
-  /* =========================
-     SERVICIOS
-  ========================= */
+      /*
+       * Ocultar inicio
+       */
 
-  function showServices() {
-
-    document.getElementById("home")
-      .style.display = "none";
-
-    document.getElementById("detail")
-      .style.display = "block";
+      home.style.display =
+        "none";
 
 
-    document.getElementById("detailTitle")
-      .textContent =
+      /*
+       * Mostrar detalle
+       */
+
+      detail.style.display =
+        "block";
+
+
+      /*
+       * Encabezado
+       */
+
+      document.getElementById(
+        "detailTitle"
+      ).textContent =
         "Servicios";
 
 
-    document.getElementById("detailDescription")
-      .textContent =
+      document.getElementById(
+        "detailDescription"
+      ).textContent =
         "Soluciones para tus documentos y proyectos.";
 
 
-    document.getElementById("detailProducts")
-      .style.display = "none";
+      /*
+       * Ocultar productos
+       */
+
+      document.getElementById(
+        "detailProducts"
+      ).style.display =
+        "none";
 
 
-    document.getElementById("detailSearchWrapper")
-      .style.display = "none";
+      document.getElementById(
+        "detailSearchWrapper"
+      ).style.display =
+        "none";
 
 
-    document.getElementById("detailNoResults")
-      .style.display = "none";
+      document.getElementById(
+        "detailNoResults"
+      ).style.display =
+        "none";
 
 
-    document.getElementById("servicesList")
-      .style.display = "block";
+      /*
+       * Mostrar servicios
+       */
+
+      document.getElementById(
+        "servicesList"
+      ).style.display =
+        "block";
 
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-
-  }
+      currentCategory =
+        null;
 
 
-  /* =========================
-     VOLVER
-  ========================= */
+      /*
+       * IMPORTANTE:
+       * llevar el detalle hasta
+       * arriba de la página.
+       */
 
-  function goHome() {
+      requestAnimationFrame(() => {
 
-    document.getElementById("detail")
-      .style.display = "none";
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
 
+      });
 
-    document.getElementById("home")
-      .style.display = "block";
-
-
-    document.getElementById("servicesList")
-      .style.display = "none";
-
-
-    document.getElementById("detailProducts")
-      .style.display = "grid";
+    }
 
 
-    document.getElementById("detailSearchWrapper")
-      .style.display = "block";
+    window.showServices =
+      showServices;
 
 
-    document.getElementById("detailSearch")
-      .value = "";
+    /* =========================
+       VOLVER AL CATÁLOGO
+    ========================= */
+
+    function goHome() {
+
+      /*
+       * Ocultar detalle
+       */
+
+      document.getElementById(
+        "detail"
+      ).style.display =
+        "none";
 
 
-    currentCategory = null;
+      /*
+       * Mostrar inicio
+       */
+
+      document.getElementById(
+        "home"
+      ).style.display =
+        "block";
 
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+      /*
+       * Restaurar productos
+       */
 
-  }
+      document.getElementById(
+        "servicesList"
+      ).style.display =
+        "none";
 
-</script>
+
+      document.getElementById(
+        "detailProducts"
+      ).style.display =
+        "grid";
+
+
+      document.getElementById(
+        "detailSearchWrapper"
+      ).style.display =
+        "block";
+
+
+      document.getElementById(
+        "detailSearch"
+      ).value = "";
+
+
+      currentCategory =
+        null;
+
+
+      /*
+       * Regresar al inicio
+       */
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+
+  </script>
 
 </body>
 </html>
