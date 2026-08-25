@@ -1212,10 +1212,12 @@
     renderDetailProducts(category);
 
 
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+  setTimeout(() => {
+    document.getElementById("detailProducts").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
     });
+  }, 100);
 
   }
 
